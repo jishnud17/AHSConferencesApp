@@ -2,15 +2,10 @@ import React, { useState } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 
-import { DayCellContentArg } from '@fullcalendar/core'
-
 function Calendar() {
 
     const [dateInfo, setDateInfo] = useState({});
 
-    /**
-     * @param {DayCellContentArg} info
-     */
     const colorAorB = (date) => {
         if ([0, 6].includes(date.getDay())) return "black";
         if (date.getDate() % 2 === 0) return "#c03a2a";
@@ -18,7 +13,7 @@ function Calendar() {
     }
 
     /**
-     * @param {DayCellContentArg} info
+     * @param {import('@fullcalendar/core').DayCellContentArg} info
      */
     const updateDayColor = (info) => {
         // will eventually use dateInfo object to determine color

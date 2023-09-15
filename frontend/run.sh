@@ -28,4 +28,7 @@ export PUBLIC_URL="https://codermerlin.academy/igis/$USER"
 export REACT_APP_USER=$USER
 
 # Build
-npm start
+npm run build
+
+# Running the app - Node, this is a temporary solution. It should eventually be replaced by hosting on the backend.
+node app.js
