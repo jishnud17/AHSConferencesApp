@@ -23,5 +23,9 @@ ulimit -u 256
 ulimit -v 67108864
 ulimit -t 1200
 
+export PORT=$IGIS_LOCAL_PORT
+export PUBLIC_URL="https://codermerlin.academy/igis/$USER"
+export REACT_APP_USER=$USER
+
 # Build
 npm start
